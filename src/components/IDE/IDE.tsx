@@ -50,7 +50,7 @@ export default function IDE() {
         <div ref={dropdownRef} className="md:hidden border-b border-border bg-surface px-3 py-2 relative" onKeyDown={handleDropdownKeyDown}>
           <button
             onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-            className="flex items-center justify-between w-full text-sm font-mono text-text-primary hover:text-text-primary transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-cyan rounded"
+            className="flex items-center justify-between w-full text-sm font-mono text-text-muted hover:text-text-primary transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-cyan rounded"
             aria-label="Select a programming language"
             aria-expanded={mobileDropdownOpen}
           >
@@ -62,8 +62,7 @@ export default function IDE() {
                 </>
               ) : (
                 <>
-                  <span className="w-4 h-4 inline-block" />
-                  Select a language...
+                  <span role="img" aria-label="Folder">📁</span> Select a language...
                 </>
               )}
             </span>
@@ -75,7 +74,7 @@ export default function IDE() {
           </button>
 
           {mobileDropdownOpen && (
-            <div className="absolute top-full left-0 right-0 z-20 bg-surface-elevated border border-border rounded-b-lg shadow-xl max-h-64 overflow-y-auto">
+            <div className="absolute top-full left-0 right-0 z-20 bg-surface-elevated border border-border rounded-b-lg shadow-xl max-h-64 overflow-y-auto scrollbar scrollbar-thumb-accent-cyan scrollbar-track-surface">
               {languages.map((lang) => {
                 return (
                   <button
@@ -106,7 +105,9 @@ export default function IDE() {
               onSwitchTab={switchTab}
               onCloseTab={closeTab}
             />
-            <Editor activeTabId={activeTabId} />
+            <div className="flex-1 min-h-0 overflow-y-auto scrollbar scrollbar-thumb-accent-cyan scrollbar-track-surface">
+              <Editor activeTabId={activeTabId} />
+            </div>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { WrapText } from 'lucide-react';
 import { createHighlighter, type Highlighter } from 'shiki';
 import { languages } from '@/data/languages';
 import LineNumbers from './LineNumbers';
@@ -40,6 +41,7 @@ function SkeletonLoader() {
 export default function Editor({ activeTabId }: EditorProps) {
   const [highlighter, setHighlighter] = useState<Highlighter | null>(null);
   const [highlightedHtml, setHighlightedHtml] = useState<string>('');
+  const [wordWrap, setWordWrap] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // Initialize Shiki once
@@ -88,14 +90,34 @@ export default function Editor({ activeTabId }: EditorProps) {
   }
 
   return (
-    <div ref={scrollRef} className="flex-1 overflow-auto bg-surface">
-      <div className="flex min-h-full">
-        <LineNumbers count={lineCount} />
-        <div className="flex-1 py-4 pr-4 overflow-x-auto">
-          <div
-            className="shiki-wrapper"
-            dangerouslySetInnerHTML={{ __html: highlightedHtml }}
-          />
+    <div className="flex flex-col flex-1 min-h-0 bg-surface">
+      {/* Toolbar */}
+      <div className="flex items-center justify-end px-3 py-1 border-b border-border bg-surface">
+        <button
+          onClick={() => setWordWrap((w) => !w)}
+          title={wordWrap ? 'Disable word wrap' : 'Enable word wrap'}
+          aria-label={wordWrap ? 'Disable word wrap' : 'Enable word wrap'}
+          aria-pressed={wordWrap}
+          className={`flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-mono transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-cyan ${
+            wordWrap
+              ? 'text-accent-cyan bg-accent-cyan/10'
+              : 'text-text-muted hover:text-text-primary'
+          }`}
+        >
+          <WrapText className="w-3.5 h-3.5" />
+          <span className="hidden sm:inline">Wrap</span>
+        </button>
+      </div>
+
+      <div ref={scrollRef} className="flex-1 overflow-auto">
+        <div className="flex min-h-full">
+          {!wordWrap && <LineNumbers count={lineCount} />}
+          <div className={`flex-1 py-4 pr-4 ${wordWrap ? 'pl-4 shiki-wrap' : 'overflow-x-auto'}` }>
+            <div
+              className="shiki-wrapper"
+              dangerouslySetInnerHTML={{ __html: highlightedHtml }}
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ export default function TabBar({ tabs, activeTabId, onSwitchTab, onCloseTab }: T
                   e.stopPropagation();
                   onCloseTab(tab.id);
                 }}
-                className="ml-1 p-0.5 rounded hover:bg-border/60 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-cyan cursor-pointer"
+                className="ml-1 p-0.5 rounded hover:bg-border/60 opacity-60 md:opacity-0 md:group-hover:opacity-100 transition-opacity focus:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-cyan cursor-pointer"
               >
                 <X className="w-3.5 h-3.5" aria-hidden="true" />
               </button>

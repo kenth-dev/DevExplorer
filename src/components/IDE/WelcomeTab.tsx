@@ -9,7 +9,7 @@ export default function WelcomeTab() {
 
       <section className="mb-6">
         <h3 className="text-base font-semibold text-text-primary mb-2">
-          👋 What is this?
+          What is this?
         </h3>
         <p className="text-text-muted">
           This is an interactive code explorer built for students like you.
@@ -19,7 +19,7 @@ export default function WelcomeTab() {
 
       <section className="mb-6">
         <h3 className="text-base font-semibold text-text-primary mb-2">
-          📁 How to explore languages
+          How to explore languages
         </h3>
         <p className="text-text-muted mb-1">
           Look at the left sidebar under{' '}
@@ -32,7 +32,7 @@ export default function WelcomeTab() {
 
       <section className="mb-6">
         <h3 className="text-base font-semibold text-text-primary mb-2">
-          💬 What are comments?
+          What are comments?
         </h3>
         <p className="text-text-muted mb-3">
           Comments are notes that programmers write in their code for humans to
@@ -55,7 +55,7 @@ export default function WelcomeTab() {
 
       <section className="mb-6">
         <h3 className="text-base font-semibold text-text-primary mb-2">
-          📌 What will I see in each file?
+          What will I see in each file?
         </h3>
         <p className="text-text-muted mb-2">
           Each file contains a &quot;Hello World&quot; program — the very first thing most
@@ -68,9 +68,21 @@ export default function WelcomeTab() {
         </ul>
       </section>
 
+      <section className="mb-6">
+        <h3 className="text-base font-semibold text-text-primary mb-2">
+          Tip: Word Wrap
+        </h3>
+        <p className="text-text-muted">
+          Long lines of code can be cut off on smaller screens. Click the{' '}
+          <span className="text-accent-cyan">Wrap</span> button in the top-right
+          corner of the editor to enable word wrap — this makes all code visible
+          without scrolling sideways.
+        </p>
+      </section>
+
       <section>
         <h3 className="text-base font-semibold text-text-primary mb-2">
-          🚀 Ready to start?
+          Ready to start?
         </h3>
         <p className="text-accent-cyan">
           Click any language file on the left to begin exploring!

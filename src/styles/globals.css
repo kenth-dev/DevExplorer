@@ -159,6 +159,14 @@ body {
   min-width: max-content;
 }
 
+/* Word wrap mode */
+.shiki-wrap .shiki code {
+  min-width: unset;
+  white-space: pre-wrap;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
 /* Glitch pseudo-element support */
 .glitch-text {
   position: relative;

@@ -21,7 +21,7 @@ export default function TabBar({ tabs, activeTabId, onSwitchTab, onCloseTab }: T
               isActive
                 ? 'bg-surface-elevated text-text-primary'
                 : 'bg-surface text-text-muted hover:bg-surface-elevated/50 hover:text-text-primary'
-            } ${!isActive ? 'hidden md:flex' : ''}`}
+            }`}
           >
             {/* Active tab bottom indicator */}
             {isActive && (

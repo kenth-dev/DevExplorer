@@ -50,7 +50,7 @@ export default function IDE() {
         <div ref={dropdownRef} className="md:hidden border-b border-border bg-surface px-3 py-2 relative" onKeyDown={handleDropdownKeyDown}>
           <button
             onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-            className="flex items-center justify-between w-full text-sm font-mono text-text-muted hover:text-text-primary transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-cyan rounded"
+            className="flex items-center justify-between w-full text-sm font-mono text-text-primary hover:text-text-primary transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-cyan rounded"
             aria-label="Select a programming language"
             aria-expanded={mobileDropdownOpen}
           >

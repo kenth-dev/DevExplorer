@@ -54,8 +54,18 @@ export default function IDE() {
             aria-label="Select a programming language"
             aria-expanded={mobileDropdownOpen}
           >
-            <span>
-              {activeLang ? `📁 ${activeLang.filename}` : '📁 Select a language...'}
+            <span className="flex items-center gap-2">
+              {activeLang ? (
+                <>
+                  <LanguageIcon languageId={activeLang.id} className="w-4 h-4 shrink-0" />
+                  {activeLang.filename}
+                </>
+              ) : (
+                <>
+                  <span className="w-4 h-4 inline-block" />
+                  Select a language...
+                </>
+              )}
             </span>
             <ChevronDown
               className={`w-4 h-4 transition-transform duration-200 ${

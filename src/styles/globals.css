@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+/* ============================================
+   DevExplorer — Cyberpunk Terminal Theme
+   Tailwind v4 CSS-based configuration
+   ============================================ */
+
+@theme {
+  /* Color Tokens */
+  --color-bg: #0d0d1a;
+  --color-surface: #12121f;
+  --color-surface-elevated: #1a1a2e;
+  --color-border: #2a2a4a;
+  --color-accent-cyan: #00f5ff;
+  --color-accent-purple: #bd00ff;
+  --color-accent-green: #00ff88;
+  --color-text-primary: #e2e8f0;
+  --color-text-muted: #64748b;
+
+  /* Language accent colors */
+  --color-lang-yellow: #f7df1e;
+  --color-lang-indigo: #6366f1;
+  --color-lang-orange: #f97316;
+  --color-lang-blue: #3b82f6;
+  --color-lang-red: #ef4444;
+  --color-lang-cyan: #00f5ff;
+
+  /* Font families */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Fira Code", monospace;
+
+  /* Custom keyframes */
+  --animate-glitch: glitch 0.8s ease-in-out forwards;
+  --animate-blink: blink 1s step-end infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-fade-slide-up: fade-slide-up 0.4s ease-out forwards;
+  --animate-bounce-gentle: bounce-gentle 2s ease-in-out infinite;
+
+  @keyframes glitch {
+    0% {
+      text-shadow: 2px 0 #00f5ff, -2px 0 #bd00ff;
+      transform: translate(0);
+    }
+    10% {
+      text-shadow: -3px 0 #00f5ff, 3px 0 #bd00ff;
+      transform: translate(-2px, 1px);
+    }
+    20% {
+      text-shadow: 3px 0 #00f5ff, -3px 0 #bd00ff;
+      transform: translate(2px, -1px);
+    }
+    30% {
+      text-shadow: -1px 0 #00f5ff, 1px 0 #bd00ff;
+      transform: translate(-1px, 2px);
+    }
+    40% {
+      text-shadow: 1px 0 #00f5ff, -1px 0 #bd00ff;
+      transform: translate(1px, -2px);
+    }
+    50% {
+      text-shadow: -2px 0 #00f5ff, 2px 0 #bd00ff;
+      transform: translate(2px, 1px);
+    }
+    60% {
+      text-shadow: 2px 0 #00f5ff, -2px 0 #bd00ff;
+      transform: translate(-2px, -1px);
+    }
+    70% {
+      text-shadow: 0 0 #00f5ff, 0 0 #bd00ff;
+      transform: translate(0);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(0, 245, 255, 0.5), 0 0 20px rgba(0, 245, 255, 0.3);
+      transform: translate(0);
+    }
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(0, 245, 255, 0.2), 0 0 10px rgba(0, 245, 255, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 10px rgba(0, 245, 255, 0.4), 0 0 20px rgba(0, 245, 255, 0.2);
+    }
+  }
+
+  @keyframes fade-slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounce-gentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling for the IDE feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Shiki code block base styling */
+.shiki {
+  background-color: transparent !important;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.shiki code {
+  display: block;
+  min-width: max-content;
+}
+
+/* Glitch pseudo-element support */
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  animation: glitch-before 0.8s ease-in-out forwards;
+}
+
+.glitch-text::after {
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  animation: glitch-after 0.8s ease-in-out forwards;
+}
+
+@keyframes glitch-before {
+  0% { transform: translate(0); }
+  10% { transform: translate(-3px, 0); color: var(--color-accent-cyan); }
+  20% { transform: translate(3px, 0); color: var(--color-accent-purple); }
+  30% { transform: translate(-2px, 0); }
+  40% { transform: translate(2px, 0); }
+  50% { transform: translate(-1px, 0); }
+  60% { transform: translate(1px, 0); }
+  70%, 100% { transform: translate(0); color: inherit; }
+}
+
+@keyframes glitch-after {
+  0% { transform: translate(0); }
+  10% { transform: translate(3px, 0); color: var(--color-accent-purple); }
+  20% { transform: translate(-3px, 0); color: var(--color-accent-cyan); }
+  30% { transform: translate(2px, 0); }
+  40% { transform: translate(-2px, 0); }
+  50% { transform: translate(1px, 0); }
+  60% { transform: translate(-1px, 0); }
+  70%, 100% { transform: translate(0); color: inherit; }
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dot grid background pattern for hero */
+.dot-grid-bg {
+  background-image: radial-gradient(circle, rgba(0, 245, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Mobile code font size */
+@media (max-width: 767px) {
+  .shiki {
+    font-size: 12px;
+  }
+}

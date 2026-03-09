@@ -221,6 +221,23 @@ body {
   background-size: 24px 24px;
 }
 
+/* Scanline overlay — applied as a pseudo-element so it doesn't affect layout */
+.scanline-bg::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 245, 255, 0.08) 2px,
+    rgba(0, 245, 255, 0.08) 4px
+  );
+  z-index: 0;
+}
+
 /* Mobile code font size */
 @media (max-width: 767px) {
   .shiki {

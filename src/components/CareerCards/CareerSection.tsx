@@ -3,7 +3,7 @@ import CareerCard from './CareerCard';
 
 export default function CareerSection() {
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-16 md:py-24">
+    <section className="relative w-full max-w-6xl mx-auto px-4 py-16 md:py-24 scanline-bg overflow-hidden">
       {/* Section heading */}
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold font-mono text-text-primary mb-3">

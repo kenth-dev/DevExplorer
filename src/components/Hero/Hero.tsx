@@ -3,33 +3,23 @@ import GlitchText from './GlitchText';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden dot-grid-bg">
-      {/* Subtle scanline overlay */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,245,255,0.08) 2px, rgba(0,245,255,0.08) 4px)',
-        }}
-        aria-hidden="true"
-      />
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden scanline-bg">
 
       <div className="relative z-10 text-center max-w-3xl mx-auto">
         {/* Glitch title */}
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-mono tracking-tight mb-6 drop-shadow-[0_0_30px_rgba(0,245,255,0.3)]">
           <GlitchText text="HELLO WORLD" />
+          <span className="inline-block w-1 h-[0.85em] bg-accent-cyan ml-2 align-middle animate-blink" />
         </h1>
 
-        {/* Subheading with blinking cursor */}
+        {/* Subheading */}
         <p className="text-lg sm:text-xl md:text-2xl text-text-muted font-mono mb-6">
           This is the first line of code most programmers learn
-          <span className="inline-block w-0.5 h-5 sm:h-6 bg-accent-cyan ml-1 align-middle animate-blink" />
         </p>
 
         {/* Body text */}
-        <p className="text-sm sm:text-base text-text-muted/80 max-w-xl mx-auto leading-relaxed mb-12">
-          Printing is how programming languages display text on screen.
-          Here is how to print &quot;Hello World&quot; in different programming languages&nbsp;↓
+        <p className="font-mono text-sm sm:text-base text-text-muted/80 max-w-lg mx-auto leading-relaxed mb-12">
+          Learn how to print "Hello World" in different programming languages below.
         </p>
       </div>
 

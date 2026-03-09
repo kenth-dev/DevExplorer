@@ -7,15 +7,7 @@ import Sidebar from './Sidebar';
 import TabBar from './TabBar';
 import Editor from './Editor';
 import StatusBar from './StatusBar';
-
-const ACCENT_DOT_COLORS: Record<string, string> = {
-  'lang-yellow': 'bg-lang-yellow',
-  'lang-indigo': 'bg-lang-indigo',
-  'lang-orange': 'bg-lang-orange',
-  'lang-blue': 'bg-lang-blue',
-  'lang-red': 'bg-lang-red',
-  'lang-cyan': 'bg-accent-cyan',
-};
+import LanguageIcon from './LanguageIcon';
 
 export default function IDE() {
   const { openTabs, activeTabId, openTab, closeTab, switchTab } = useTabs();
@@ -75,7 +67,6 @@ export default function IDE() {
           {mobileDropdownOpen && (
             <div className="absolute top-full left-0 right-0 z-20 bg-surface-elevated border border-border rounded-b-lg shadow-xl max-h-64 overflow-y-auto">
               {languages.map((lang) => {
-                const dotColor = ACCENT_DOT_COLORS[lang.accentColor] ?? 'bg-text-muted';
                 return (
                   <button
                     key={lang.id}
@@ -86,7 +77,7 @@ export default function IDE() {
                         : 'text-text-muted hover:bg-surface-elevated hover:text-text-primary'
                     }`}
                   >
-                    <span className={`w-2 h-2 rounded-full shrink-0 ${dotColor}`} aria-hidden="true" />
+                    <LanguageIcon languageId={lang.id} className="w-4 h-4 shrink-0" />
                     {lang.filename}
                   </button>
                 );

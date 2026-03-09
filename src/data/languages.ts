@@ -15,13 +15,14 @@ export const languages: Language[] = [
 # Created by: Guido van Rossum (1991)
 #
 # WHERE IS PYTHON USED?
-#   - Data Science and Machine Learning (most popular language for AI)
+#   - Data Science and Machine Learning
+#     (most popular language for AI)
 #   - Web Development (Django, Flask frameworks)
 #   - Automation and scripting
 #   - Scientific research and academia
 #
-# Python is known for its clean, readable syntax —
-# it reads almost like plain English.
+# Python is known for its clean, readable syntax.
+# It reads almost like plain English.
 # ============================================
 
 # The print() function displays text on the screen
@@ -49,9 +50,8 @@ print("Hello, World!")
 //   - Backend servers (Node.js)
 //   - Mobile apps (React Native)
 //
-// JavaScript is the most widely used programming
-// language in the world. Every website you visit
-// uses JavaScript.
+// JavaScript is the most widely used programming language
+// in the world. Every website you visit uses JavaScript.
 // ============================================
 
 // console.log() prints a message to the browser console
@@ -84,8 +84,8 @@ console.log("Hello, World!");
 //   - Over 75% of websites use PHP on the backend
 //
 // PHP stands for "PHP: Hypertext Preprocessor."
-// It powers WordPress, which runs about 40% of
-// all websites on the internet.
+// It powers WordPress, which runs about 40% of all
+// websites on the internet.
 // ============================================
 
 // echo outputs text to the web page
@@ -118,8 +118,8 @@ echo "Hello, World!";
 //   - Big data processing (Hadoop, Spark)
 //
 // Java's motto is "Write Once, Run Anywhere" —
-// code compiled in Java can run on any device
-// that has the Java Virtual Machine (JVM).
+// code compiled in Java can run on any device that has
+// the Java Virtual Machine (JVM) installed.
 // ============================================
 
 // Every Java program needs a class and a main method
@@ -155,9 +155,9 @@ public class HelloWorld {
 //   - Game engines and performance-critical software
 //   - System-level programming
 //
-// C is one of the oldest and most influential
-// programming languages. Almost every modern
-// language was inspired by C's syntax.
+// C is one of the oldest and most influential programming
+// languages. Almost every modern language was inspired
+// by C's syntax.
 // ============================================
 
 // #include loads the standard input/output library
@@ -196,9 +196,9 @@ int main() {
 //   - High-performance computing and simulations
 //   - Competitive programming
 //
-// C++ extends the C language with object-oriented
-// features. It's the language behind most AAA
-// video games and performance-critical software.
+// C++ extends C with object-oriented features.
+// It's the language behind most AAA video games
+// and performance-critical software.
 // ============================================
 
 // #include loads the input/output stream library
@@ -238,8 +238,8 @@ int main() {
 //   - Any project where JavaScript needs more safety
 //
 // TypeScript is JavaScript with added type checking.
-// It catches bugs before your code even runs,
-// making it perfect for team projects.
+// It catches bugs before your code even runs, making
+// it perfect for large team projects.
 // ============================================
 
 // We declare a variable with a type annotation (: string)
@@ -273,8 +273,8 @@ console.log(message);
 #   - DevOps tools (Chef, Puppet)
 #
 # Ruby was designed to make programmers happy.
-# Its creator said: "Ruby is designed to make
-# programmers productive and happy."
+# Its creator said: "Ruby is designed to make programmers
+# productive and happy."
 # ============================================
 
 # puts (put string) prints text with a newline at the end
@@ -304,9 +304,8 @@ puts "Hello, World!"
 //   - DevOps and networking tools
 //   - High-performance backend systems
 //
-// Go was created at Google to be simple, fast,
-// and great at handling many tasks at once
-// (called "concurrency").
+// Go was created at Google to be simple, fast, and great
+// at handling many tasks at once (called "concurrency").
 // ============================================
 
 // Every Go file starts with a package declaration
@@ -345,9 +344,9 @@ func main() {
 //   - Safety-critical software (no crashes, no data races)
 //   - Command-line tools and game engines
 //
-// Rust is loved by developers for being blazingly
-// fast while preventing common bugs that crash
-// programs in C and C++.
+// Rust is loved by developers for being blazingly fast
+// while preventing common bugs that crash programs
+// in C and C++.
 // ============================================
 
 // fn main() is the entry point of every Rust program
@@ -381,8 +380,8 @@ fn main() {
 //   - Server-side Swift (Vapor framework)
 //
 // Swift is Apple's modern programming language.
-// If you want to build apps for iPhones, iPads,
-// or Macs, Swift is the language to learn.
+// If you want to build apps for iPhones, iPads, or
+// Macs, Swift is the language to learn.
 // ============================================
 
 // print() displays text in the console — simple!

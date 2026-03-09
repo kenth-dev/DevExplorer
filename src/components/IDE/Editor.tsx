@@ -38,11 +38,20 @@ function SkeletonLoader() {
   );
 }
 
+
 export default function Editor({ activeTabId }: EditorProps) {
   const [highlighter, setHighlighter] = useState<Highlighter | null>(null);
   const [highlightedHtml, setHighlightedHtml] = useState<string>('');
-  const [wordWrap, setWordWrap] = useState(false);
+  const [wordWrap, setWordWrap] = useState(() => window.innerWidth < 768);
   const scrollRef = useRef<HTMLDivElement>(null);
+  // Auto-enable word wrap on mobile, update on resize
+  useEffect(() => {
+    function handleResize() {
+      setWordWrap(window.innerWidth < 768);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Initialize Shiki once
   useEffect(() => {

@@ -22,11 +22,16 @@ export default function WelcomeTab() {
           How to explore languages
         </h3>
         <p className="text-text-muted mb-1">
-          Look at the left sidebar under{' '}
-          <span className="text-accent-cyan">&quot;PROGRAMMING LANGUAGES&quot;</span>
+          <span className="hidden md:inline">
+            Look at the left sidebar under{' '}
+            <span className="text-accent-cyan">&quot;PROGRAMMING LANGUAGES&quot;</span>.
+          </span>
+          <span className="md:hidden">
+            Tap the <span className="text-accent-cyan">Language selection</span> at the top to see all available languages.
+          </span>
         </p>
         <p className="text-text-muted">
-          Click any file to open it in a new tab and see the code!
+          Select any file to open it in a new tab and see the code!
         </p>
       </section>
 
@@ -85,7 +90,7 @@ export default function WelcomeTab() {
           Ready to start?
         </h3>
         <p className="text-accent-cyan">
-          Click any language file on the left to begin exploring!
+          Click any programming language to begin exploring!
         </p>
       </section>
     </div>

@@ -13,6 +13,7 @@ export interface CareerPath {
   id: string;
   title: string;
   icon: string;
+  image: string;
   description: string;
   languages: string[];
 }

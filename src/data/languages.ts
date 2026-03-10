@@ -58,7 +58,7 @@ print("Hello, World!")
 console.log("Hello, World!");
 
 // You can also use document.write() to display on a web page
-// document.write("Hello, World!");
+document.write("Hello, World!");
 
 // JavaScript uses semicolons at the end of statements,
 // but they are technically optional.`,
@@ -92,7 +92,7 @@ console.log("Hello, World!");
 echo "Hello, World!";
 
 // You can also use print — it works almost the same way
-// print("Hello, World!");
+print("Hello, World!");
 
 // PHP code is written between <?php and ?> tags.
 // Every statement ends with a semicolon.

@@ -11,9 +11,9 @@ export default function WelcomeTab() {
         <h3 className="text-base font-semibold text-text-primary mb-2">
           What is this?
         </h3>
-        <p className="text-text-muted">
-          This is an interactive code explorer built for students like you.
-          Here you can browse real programming syntax in a simulated code editor.
+        <p className="text-text-muted mb-2">
+          DevExplorer IDE is a safe, interactive playground for learning about programming languages and tech careers.
+          It looks and feels like a real code editor, but you can’t break anything—just explore!
         </p>
       </section>
 
@@ -31,7 +31,7 @@ export default function WelcomeTab() {
           </span>
         </p>
         <p className="text-text-muted">
-          Select any file to open it in a new tab and see the code!
+          Select any file to open it in a new tab and enjoy exploring!
         </p>
       </section>
 

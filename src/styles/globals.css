@@ -30,7 +30,7 @@
   --font-mono: "JetBrains Mono", ui-monospace, "Fira Code", monospace;
 
   /* Custom keyframes */
-  --animate-glitch: glitch 0.8s ease-in-out forwards;
+  --animate-glitch: glitch 2s ease-in-out forwards;
   --animate-blink: blink 1s step-end infinite;
   --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
   --animate-fade-slide-up: fade-slide-up 0.4s ease-out forwards;

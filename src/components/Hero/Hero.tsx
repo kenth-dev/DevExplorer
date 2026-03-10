@@ -8,7 +8,7 @@ function scrollToIDE() {
 
 
 export default function Hero() {
-  const fullText = 'HELLO WORLD';
+  const fullText = 'HELLO, WORLD!';
   const [typed, setTyped] = useState('');
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Hero() {
       i++;
       setTyped(fullText.slice(0, i));
       if (i >= fullText.length) clearInterval(interval);
-    }, 180);
+    }, 150); 
     return () => clearInterval(interval);
     // eslint-disable-next-line
   }, []);
@@ -34,7 +34,7 @@ export default function Hero() {
 
         {/* Subheading */}
         <p className="text-sm sm:text-xl md:text-xl text-text-muted font-mono mb-6">
-          This is the first line of code most programmers learn. Explore how different languages say the same thing — then choose the ones that interest you.
+          This is the first line of code most programmers learn. Explore how different programming languages display the same text.
         </p>
 
         {/* Body text */}

@@ -37,6 +37,22 @@ export default function WelcomeTab() {
 
       <section className="mb-6">
         <h3 className="text-base font-semibold text-text-primary mb-2">
+          What will I see in each file?
+        </h3>
+        <p className="text-text-muted mb-2">
+          Each file contains a &quot;Hello World&quot; program — the very first thing most
+          programmers learn to write. It also includes comments explaining:
+        </p>
+        <ul className="list-disc list-inside text-text-muted space-y-1 ml-2">
+          <li>What the language is used for</li>
+          <li>Where it is most popular</li>
+          <li>Who typically uses it</li>
+        </ul>
+      </section>
+      
+
+      <section className="mb-6">
+        <h3 className="text-base font-semibold text-text-primary mb-2">
           What are comments?
         </h3>
         <p className="text-text-muted mb-3">
@@ -56,21 +72,6 @@ export default function WelcomeTab() {
             {'-- This is a comment in some other languages'}
           </code>
         </div>
-      </section>
-
-      <section className="mb-6">
-        <h3 className="text-base font-semibold text-text-primary mb-2">
-          What will I see in each file?
-        </h3>
-        <p className="text-text-muted mb-2">
-          Each file contains a &quot;Hello World&quot; program — the very first thing most
-          programmers learn to write. It also includes comments explaining:
-        </p>
-        <ul className="list-disc list-inside text-text-muted space-y-1 ml-2">
-          <li>What the language is used for</li>
-          <li>Where it is most popular</li>
-          <li>Who typically uses it</li>
-        </ul>
       </section>
 
       <section className="mb-6">

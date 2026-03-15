@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Branding */}
           <div className="flex flex-col items-center md:items-start gap-1">
             <span className="text-accent-cyan text-lg font-mono">DevExplorer</span>
-            <span className="text-xs font-mono text-text-muted text-center">Built by Kenneth Gasmen to inspire the next generation of developers.</span>
+            <span className="text-[11px] font-mono text-text-muted text-center">Built by Kenneth Gasmen to inspire the next generation of developers.</span>
           </div>
 
           {/* Contact icons */}

@@ -204,19 +204,22 @@ int main() {
 // #include loads the input/output stream library
 #include <iostream>
 
+// using namespace std lets us write cout and endl without std::
+using namespace std;
+
 // main() is the entry point of every C++ program
 int main() {
 
-    // std::cout sends text to the console output stream
-    // std::endl adds a new line and flushes the buffer
-    std::cout << "Hello, World!" << std::endl;
+    // cout sends text to the console output stream
+    // endl adds a new line and flushes the buffer
+    cout << "Hello, World!" << endl;
 
     // return 0 signals the program finished successfully
     return 0;
 }
 
 // C++ uses << (insertion operator) instead of printf().
-// "std::" means it comes from the standard library.`,
+// "using namespace std;" shortens standard library names.`,
   },
   {
     id: 'typescript',
